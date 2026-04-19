@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CINEMA GUIDE | まだ知らない名作に、出会おう。</title>
+    <meta
+      name="description"
+      content="感動作、SF、サスペンス、アニメまで。気分で選べるシネマティックな映画紹介サイト。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="site-logo" href="#top" aria-label="CINEMA GUIDE ホームへ">
+          <span class="site-logo-mark">CG</span>
+          <span class="site-logo-text">CINEMA GUIDE</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="global-nav"
+          aria-label="メニューを開く"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="global-nav" id="global-nav" aria-label="グローバルナビゲーション">
+          <a href="#top">ホーム</a>
+          <a href="#ranking">ランキング</a>
+          <a href="#genre-index">ジャンル</a>
+          <a href="#mood">特集</a>
+          <a href="#footer">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="hero-arch hero-arch-left"></div>
+          <div class="hero-arch hero-arch-right"></div>
+          <div class="hero-light hero-light-left"></div>
+          <div class="hero-light hero-light-right"></div>
+          <div class="film-grain"></div>
+        </div>
+
+        <div class="container hero-layout">
+          <div class="hero-content">
+            <p class="hero-kicker reveal">Curated Cinema Selection</p>
+            <h1 class="hero-title reveal" id="hero-title">
+              まだ知らない名作に、<br />
+              出会おう。
+            </h1>
+            <p class="hero-description reveal">
+              感動作、SF、サスペンス、アニメまで。気分で選べる映画紹介サイト。
+            </p>
+
+            <div class="hero-actions reveal">
+              <a class="button button-primary" href="#ranking">おすすめを見る</a>
+              <a class="button button-secondary" href="#genre-index">ジャンルから探す</a>
+            </div>
+
+            <div class="hero-metrics reveal" aria-label="サイトの特徴">
+              <article class="metric-card">
+                <span class="metric-label">Featured Titles</span>
+                <strong>18+</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Genres</span>
+                <strong>6</strong>
+              </article>
+              <article class="metric-card">
+                <span class="metric-label">Mood Select</span>
+                <strong>5</strong>
+              </article>
+            </div>
+          </div>
+
+          <aside class="hero-showcase reveal" aria-label="サイト演出の装飾パネル">
+            <div class="showcase-frame">
+              <p class="showcase-kicker">Now Screening</p>
+              <div class="showcase-display">
+                <span class="showcase-line">PREMIUM SELECTION</span>
+                <strong>CINEMA<br />CURATION</strong>
+              </div>
+              <div class="showcase-meta">
+                <span>Dark Luxe UI</span>
+                <span>Editorial Layout</span>
+                <span>Genre Journey</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <a class="scroll-indicator" href="#intro" aria-label="次のセクションへスクロール">
+          <span>Scroll</span>
+          <span class="scroll-line"></span>
+        </a>
+      </section>
+
+      <!-- Intro -->
+      <section class="intro-section section-shell" id="intro">
+        <div class="container intro-grid">
+          <div class="section-heading">
+            <p class="eyebrow">Intro</p>
+            <h2>気分で映画を選びたい夜に、迷わないガイドを。</h2>
+            <p class="intro-quote">Cinema is atmosphere before it becomes story.</p>
+          </div>
+          <div class="intro-copy glass-panel">
+            <p>
+              気分で映画を選びたい夜も、絶対に外したくない休日も。
+              このサイトでは、ジャンル別・テーマ別におすすめ映画をわかりやすく紹介します。
+            </p>
+            <p>
+              ただ並べるだけではなく、作品の魅力や観るべき理由がひと目で伝わるよう、
+              大人っぽく上質なトーンで情報を整理しました。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Genre Index -->
+      <section class="genre-index-section section-shell" id="genre-index">
+        <div class="container">
+          <div class="section-heading section-heading-center">
+            <p class="eyebrow">Quick Navigation</p>
+            <h2>ジャンルから探す</h2>
+            <p class="section-lead">
+              その日の気分に近い世界観から、次の一本へすばやくたどり着けます。
+            </p>
+          </div>
+          <div class="genre-chip-grid" id="genre-chip-grid"></div>
+        </div>
+      </section>
+
+      <!-- Ranking -->
+      <section class="ranking-section section-shell" id="ranking">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Featured Ranking</p>
+            <h2>今すぐ観たいおすすめ映画 TOP 6</h2>
+            <p class="section-lead">
+              はじめて訪れた人でも選びやすい、完成度と没入感で選んだ注目作。
+            </p>
+          </div>
+          <div class="ranking-grid" id="ranking-grid"></div>
+        </div>
+      </section>
+
+      <!-- Genre Sections -->
+      <section class="genres-section section-shell" id="genres">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Genre Picks</p>
+            <h2>ジャンル別に映画を楽しむ</h2>
+            <p class="section-lead">
+              セクションごとに空気感を切り替えながら、観たい作品が自然に見つかる構成です。
+            </p>
+          </div>
+          <div id="genre-sections-container"></div>
+        </div>
+      </section>
+
+      <!-- Mood Finder -->
+      <section class="mood-section section-shell" id="mood">
+        <div class="container mood-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Mood Finder</p>
+            <h2>今日は何を観たい？</h2>
+            <p class="section-lead">
+              いまの気分を選ぶと、ぴったりの映画を3本ずつ切り替えて表示します。
+            </p>
+          </div>
+
+          <div class="mood-controls" id="mood-controls" role="tablist" aria-label="気分で探すボタン"></div>
+          <div class="mood-result-panel glass-panel" id="mood-result-panel">
+            <div class="mood-result-header">
+              <p class="mood-result-kicker" id="mood-label">泣きたい</p>
+              <h3 id="mood-title">心をほどいてくれる映画</h3>
+            </div>
+            <div class="mood-result-grid" id="mood-result-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section section-shell">
+        <div class="container">
+          <div class="cta-panel">
+            <p class="eyebrow">Last Scene</p>
+            <h2>次の一本を探そう</h2>
+            <p>
+              まだ観たことのない物語が、きっとあなたの夜を変えてくれる。
+              気になるジャンルから、今の気分から、次の一本を選んでみてください。
+            </p>
+            <div class="cta-actions">
+              <a class="button button-primary" href="#genre-index">ジャンルから探す</a>
+              <a class="button button-secondary" href="#top">トップへ戻る</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="container footer-inner">
+        <div>
+          <a class="site-logo footer-logo" href="#top">CINEMA GUIDE</a>
+          <p class="footer-copy">
+            気分と物語をつなぐ、シネマティックな映画紹介サイト。
+          </p>
+          <p class="footer-assets">Assets directory ready: <code>assets/</code></p>
+        </div>
+        <nav class="footer-nav" aria-label="フッターナビゲーション">
+          <a href="#top">ホーム</a>
+          <a href="#ranking">ランキング</a>
+          <a href="#genre-index">ジャンル</a>
+          <a href="#mood">特集</a>
+          <a href="#footer">お問い合わせ</a>
+        </nav>
+        <p class="copyright">© 2026 CINEMA GUIDE. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
