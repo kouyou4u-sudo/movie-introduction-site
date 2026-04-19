@@ -325,6 +325,7 @@ const moodControls = document.getElementById("mood-controls");
 const moodTitle = document.getElementById("mood-title");
 const moodLabel = document.getElementById("mood-label");
 const moodResultGrid = document.getElementById("mood-result-grid");
+const heroSection = document.querySelector(".hero-section");
 
 function renderGenreChips() {
   genreChipGrid.innerHTML = genreOrder
@@ -545,6 +546,47 @@ function setupReveal() {
   revealElements.forEach((element) => revealObserver.observe(element));
 }
 
+function setupHeroParallax() {
+  if (!heroSection || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const layers = heroSection.querySelectorAll("[data-parallax]");
+  if (!layers.length) {
+    return;
+  }
+
+  const resetLayers = () => {
+    layers.forEach((layer) => {
+      layer.style.transform = "";
+    });
+  };
+
+  const updateLayers = (clientX, clientY) => {
+    const rect = heroSection.getBoundingClientRect();
+    const x = (clientX - rect.left) / rect.width - 0.5;
+    const y = (clientY - rect.top) / rect.height - 0.5;
+
+    layers.forEach((layer) => {
+      const depth = Number(layer.dataset.depth || 10);
+      const translateX = x * depth;
+      const translateY = y * depth;
+      layer.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+    });
+  };
+
+  heroSection.addEventListener("pointermove", (event) => {
+    if (window.innerWidth < 821) {
+      resetLayers();
+      return;
+    }
+
+    updateLayers(event.clientX, event.clientY);
+  });
+
+  heroSection.addEventListener("pointerleave", resetLayers);
+}
+
 function init() {
   renderGenreChips();
   renderRanking();
@@ -554,6 +596,7 @@ function init() {
   setupMenu();
   setupSmoothScrollOffset();
   setupReveal();
+  setupHeroParallax();
   handleHeaderState();
 
   moodControls.addEventListener("click", handleMoodSwitch);

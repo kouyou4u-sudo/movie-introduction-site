@@ -53,22 +53,29 @@
       <!-- Hero -->
       <section class="hero-section" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true">
-          <div class="hero-arch hero-arch-left"></div>
-          <div class="hero-arch hero-arch-right"></div>
-          <div class="hero-light hero-light-left"></div>
-          <div class="hero-light hero-light-right"></div>
+          <div class="hero-orb hero-orb-left" data-parallax data-depth="10"></div>
+          <div class="hero-orb hero-orb-right" data-parallax data-depth="16"></div>
+          <div class="hero-grid-lines"></div>
+          <div class="hero-veil"></div>
           <div class="film-grain"></div>
         </div>
 
         <div class="container hero-layout">
-          <div class="hero-content">
-            <p class="hero-kicker reveal">Curated Cinema Selection</p>
+          <!-- Hero copy -->
+          <div class="hero-copy-block">
+            <div class="hero-topline reveal">
+              <span class="hero-kicker">Night Curated Cinema</span>
+              <span class="hero-status">Curated / Updated Weekly</span>
+            </div>
+
             <h1 class="hero-title reveal" id="hero-title">
-              まだ知らない名作に、<br />
-              出会おう。
+              夜が深くなるほど、<br />
+              映画は見つけたくなる。
             </h1>
+
             <p class="hero-description reveal">
-              感動作、SF、サスペンス、アニメまで。気分で選べる映画紹介サイト。
+              名作、SF、サスペンス、恋愛、アニメまで。
+              その日の気分に似合う一本へ、静かな高揚感ごと連れていく映画紹介サイトです。
             </p>
 
             <div class="hero-actions reveal">
@@ -76,40 +83,71 @@
               <a class="button button-secondary" href="#genre-index">ジャンルから探す</a>
             </div>
 
+            <div class="hero-note reveal">
+              <span class="hero-note-line"></span>
+              <p>
+                今夜の一本を探すための入り口として、
+                作品の魅力と選びやすさを同時に整えています。
+              </p>
+            </div>
+
             <div class="hero-metrics reveal" aria-label="サイトの特徴">
               <article class="metric-card">
-                <span class="metric-label">Featured Titles</span>
+                <span class="metric-label">Titles</span>
                 <strong>18+</strong>
+                <p>実在映画を中心にセレクト</p>
               </article>
               <article class="metric-card">
                 <span class="metric-label">Genres</span>
                 <strong>6</strong>
+                <p>感動からアニメまで横断</p>
               </article>
               <article class="metric-card">
-                <span class="metric-label">Mood Select</span>
+                <span class="metric-label">Mood Picks</span>
                 <strong>5</strong>
+                <p>気分から探せる導線つき</p>
               </article>
             </div>
           </div>
 
-          <aside class="hero-showcase reveal" aria-label="サイト演出の装飾パネル">
-            <div class="showcase-frame">
-              <p class="showcase-kicker">Now Screening</p>
-              <div class="showcase-display">
-                <span class="showcase-line">PREMIUM SELECTION</span>
-                <strong>CINEMA<br />CURATION</strong>
-              </div>
-              <div class="showcase-meta">
-                <span>Dark Luxe UI</span>
-                <span>Editorial Layout</span>
-                <span>Genre Journey</span>
-              </div>
+          <!-- Hero visual -->
+          <aside class="hero-visual reveal" aria-label="注目作品のビジュアルパネル">
+            <div class="hero-stack" data-parallax data-depth="12">
+              <article class="hero-poster hero-poster-main">
+                <span class="hero-panel-label">Editor's Choice</span>
+                <div class="hero-poster-body">
+                  <p class="hero-poster-overline">Tonight's Feature</p>
+                  <h2>Featured<br />Picks</h2>
+                  <p class="hero-poster-copy">
+                    まだ知らない傑作に偶然出会うための、
+                    夜のためのシネマガイド。
+                  </p>
+                </div>
+                <div class="hero-poster-footer">
+                  <span>Drama / SF / Suspense</span>
+                  <span>Curated Viewing</span>
+                </div>
+              </article>
+
+              <article class="hero-floating-card hero-floating-card-top" data-parallax data-depth="18">
+                <span class="floating-label">Now Showing</span>
+                <strong>静かな高級感で、<br />次の一本へ。</strong>
+              </article>
+
+              <article class="hero-floating-card hero-floating-card-bottom" data-parallax data-depth="24">
+                <span class="floating-label">Featured Tags</span>
+                <div class="floating-tags">
+                  <span>名作</span>
+                  <span>映像美</span>
+                  <span>どんでん返し</span>
+                </div>
+              </article>
             </div>
           </aside>
         </div>
 
         <a class="scroll-indicator" href="#intro" aria-label="次のセクションへスクロール">
-          <span>Scroll</span>
+          <span>SCROLL</span>
           <span class="scroll-line"></span>
         </a>
       </section>
